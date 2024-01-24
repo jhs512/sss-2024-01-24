@@ -177,6 +177,14 @@ class Rq {
       import.meta.env.VITE_CORE_FRONT_BASE_URL
     )}/member/socialLoginCallback?provierTypeCode=kakao`;
   }
+
+  public getGoogleLoginUrl() {
+    return `${
+      import.meta.env.VITE_CORE_API_BASE_URL
+    }/member/socialLogin/google?redirectUrl=${encodeURIComponent(
+      import.meta.env.VITE_CORE_FRONT_BASE_URL
+    )}/member/socialLoginCallback?provierTypeCode=google`;
+  }
 }
 
 const rq = new Rq();
